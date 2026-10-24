@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Traversal Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Graph Traversal Visualizer</h1>
+        <p>Explore BFS and DFS with automatic node movement</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <label>
+                Algorithm
+                <select id="algorithm">
+                    <option value="BFS">Breadth-First Search (BFS)</option>
+                    <option value="DFS">Depth-First Search (DFS)</option>
+                </select>
+            </label>
+
+            <label>
+                Start Node
+                <select id="startNode">
+                    <option>A</option>
+                    <option>B</option>
+                    <option>C</option>
+                    <option>D</option>
+                    <option>E</option>
+                    <option>F</option>
+                </select>
+            </label>
+
+            <label>
+                Speed
+                <select id="speed">
+                    <option value="1600">Slow</option>
+                    <option value="900" selected>Normal</option>
+                    <option value="400">Fast</option>
+                </select>
+            </label>
+
+            <div class="buttons">
+                <button id="startBtn">Start Traversal</button>
+                <button id="resetBtn" class="reset">Reset</button>
+            </div>
+        </section>
+
+        <section class="graph-container">
+            <svg id="graph" viewBox="0 0 600 350"
+                 role="img" aria-label="Graph traversal animation">
+            </svg>
+        </section>
+
+        <section class="information">
+            <h2 id="status">Ready to start</h2>
+            <p><strong>Traversal order:</strong></p>
+            <p id="order">None</p>
+            <p class="legend">
+                <span class="dot blue"></span> Unvisited
+                <span class="dot green"></span> Visited
+                <span class="dot orange"></span> Moving marker
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        Graph Traversal Visualizer | BFS and DFS
+    </footer>
+
+</body>
+</html>
